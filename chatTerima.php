@@ -12,6 +12,8 @@ try {
 	$resultDecrypt = $chat->decryptChat($keyPair, $data);
 
 	print($chat->color('green', '[+] Chat : '.$resultDecrypt->chat));
+	$chat->generateResult($resultDecrypt->chat, 'chat.txt');
 } catch (Exception $e) {
-	print($chat->color('green', '[+] Chat : '.$data));	
+	print($chat->color('green', '[+] Chat : '.$data));
+	$chat->generateResult($data, 'chat.txt');
 }

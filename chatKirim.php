@@ -1,6 +1,10 @@
 <?php
 require_once 'lib/Annisachat.php';
 
+if (file_exists('file.txt')) {
+	unlink('file.txt');
+}
+
 $chat = new Annisachat();
 
 print($chat->color('red', '[+] Key : '));
